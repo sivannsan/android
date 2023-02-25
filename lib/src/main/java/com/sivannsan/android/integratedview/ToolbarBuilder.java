@@ -27,6 +27,7 @@ public final class ToolbarBuilder {
     @Nonnull
     private String title = "";
     private Typeface titleFont;
+    private Integer elevation;
     @Nonnull
     private final List<View> left = new ArrayList<>();
     @Nonnull
@@ -53,6 +54,12 @@ public final class ToolbarBuilder {
     @Nonnull
     public ToolbarBuilder setTitleFont(Typeface value) {
         titleFont = value;
+        return this;
+    }
+
+    @Nonnull
+    public ToolbarBuilder setElevation(Integer value) {
+        elevation = value;
         return this;
     }
 
@@ -97,12 +104,13 @@ public final class ToolbarBuilder {
         if (titleFont == null)  titleFont = Typeface.DEFAULT;
         int totalWidth = boxWidth * (left.size() + right.size()) + scene.dp(24);
 
+        if (elevation == null) elevation = scene.dp(3);
         LinearLayoutBuilder builder = new LinearLayoutBuilder(scene)
                 .setWidth(scene.width())
                 .setHeight(scene.dp(HEIGHT_IN_DP))
                 .setOrientationAsHorizontal()
                 .setBackground(Android.Color.WHITE)
-                .setElevation(scene.dp(3));
+                .setElevation(elevation);
         builder.addView(Android.Factory.newHSpace(scene, scene.dp(8)));
         for (View view : left) builder.addView(view);
         builder.addView(new LinearLayoutBuilder(scene)
