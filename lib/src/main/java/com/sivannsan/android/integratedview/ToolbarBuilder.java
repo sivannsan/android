@@ -134,7 +134,7 @@ public final class ToolbarBuilder {
                 .setHeight(scene.dp(HEIGHT_IN_DP))
                 .setOrientationAsHorizontal()
                 .setBackground(Android.Color.WHITE)
-                .setElevation(scene.dp(3));
+                .setElevation(elevation);
         builder.addView(Android.Factory.newHSpace(scene, scene.dp(8)));
         for (View view : left) builder.addView(view);
         builder.addView(new LinearLayoutBuilder(scene)
