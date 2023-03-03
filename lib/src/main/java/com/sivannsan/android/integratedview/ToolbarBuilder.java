@@ -112,18 +112,6 @@ public final class ToolbarBuilder {
     }
 
     @Nonnull
-    public ToolbarBuilder addRight(@Nonnull Bitmap icon, Consumer<ImageView> onClick) {
-        right.add(Android.Factory.newCBox(scene, boxWidth, boxHeight, Android.Factory.newImageView(scene, iconLength, iconLength, icon, onClick)));
-        return this;
-    }
-
-    @Nonnull
-    public ToolbarBuilder addLeft(@Nonnull Bitmap icon, Consumer<ImageView> onClick) {
-        left.add(Android.Factory.newCBox(scene, boxWidth, boxHeight, Android.Factory.newImageView(scene, iconLength, iconLength, icon, onClick)));
-        return this;
-    }
-
-    @Nonnull
     public LinearLayout build() {
         if (titleFont == null)  titleFont = Typeface.DEFAULT;
         int totalWidth = boxWidth * (left.size() + right.size()) + scene.dp(24);
