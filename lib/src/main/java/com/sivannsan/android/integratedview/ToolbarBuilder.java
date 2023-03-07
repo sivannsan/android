@@ -112,6 +112,18 @@ public final class ToolbarBuilder {
     }
 
     @Nonnull
+    public ToolbarBuilder addLeft(@Nonnull View uiWithIcon) {
+        left.add(uiWithIcon);
+        return this;
+    }
+
+    @Nonnull
+    public ToolbarBuilder addRight(@Nonnull View uiWithIcon) {
+        right.add(uiWithIcon);
+        return this;
+    }
+
+    @Nonnull
     public LinearLayout build() {
         if (titleFont == null)  titleFont = Typeface.DEFAULT;
         int totalWidth = boxWidth * (left.size() + right.size()) + scene.dp(24);
@@ -146,7 +158,8 @@ public final class ToolbarBuilder {
         return builder.build();
     }
 
-    public static View getUIWithIcon(@Nonnull Scene scene, @Nonnull Bitmap icon, Consumer<View> onClick) {
+    @Nonnull
+    public static View newUIWithIcon(@Nonnull Scene scene, @Nonnull Bitmap icon, Consumer<View> onClick) {
         return Android.Factory.newCBox(scene, scene.dp(HEIGHT_IN_DP - 14), scene.dp(HEIGHT_IN_DP), Android.Factory.newImageView(scene, scene.dp(30), scene.dp(30), icon, iv -> {if (onClick != null) onClick.accept(iv);}));
     }
 }
