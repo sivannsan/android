@@ -1,4 +1,4 @@
-package com.sivannsan.android.common;
+package com.sivannsan.android.picker;
 
 import android.app.Activity;
 import android.content.Intent;
