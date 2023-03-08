@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.view.MotionEvent;
+import android.view.View;
 import android.view.ViewGroup;
 
 import com.sivannsan.android.builder.AbstractBuilder;
@@ -23,7 +24,7 @@ public abstract class ViewAbstractBuilder<Builder, View extends android.view.Vie
     protected final Scene scene;
     private Integer id, width, height, elevation;
     private Consumer<View> onStart, onClick, onFinish;
-    private Function<View, Boolean> onActionDown, onActionMove, onActionUp, onActionCancel;
+    private Function<View, Boolean> onLongClick, onActionDown, onActionMove, onActionUp, onActionCancel;
     private ViewGroup.LayoutParams layoutParams;
     private Drawable background;
     private Consumer<? super android.view.View> onFocusEnter, onFocusExit;
@@ -117,6 +118,12 @@ public abstract class ViewAbstractBuilder<Builder, View extends android.view.Vie
     }
 
     @Nonnull
+    public Builder setOnLongClick(Function<View, Boolean> onLongClick) {
+        this.onLongClick = onLongClick;
+        return builder;
+    }
+
+    @Nonnull
     public Builder setOnActionDown(Function<View, Boolean> onActionDown) {
         this.onActionDown = onActionDown;
         return builder;
@@ -169,6 +176,7 @@ public abstract class ViewAbstractBuilder<Builder, View extends android.view.Vie
         else view.setLayoutParams(new ViewGroup.LayoutParams(width, height));
         if (background != null) view.setBackground(background);
         if (onClick != null) view.setOnClickListener(v -> onClick.accept(view));
+        if (onLongClick != null) view.setOnLongClickListener(v -> onLongClick.apply(view));
         if (elevation != null) view.setElevation(elevation);
         view.setOnTouchListener((v, event) -> {
             if (event.getAction() == MotionEvent.ACTION_DOWN && onActionDown != null) return onActionDown.apply(view);
