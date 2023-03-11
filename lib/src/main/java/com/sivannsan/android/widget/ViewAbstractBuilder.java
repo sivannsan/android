@@ -173,7 +173,8 @@ public abstract class ViewAbstractBuilder<Builder, View extends android.view.Vie
         if (width == null) width = WRAP_CONTENT;
         if (height == null) height = WRAP_CONTENT;
         if (layoutParams != null) view.setLayoutParams(layoutParams);
-        else view.setLayoutParams(new ViewGroup.LayoutParams(width, height));
+        else if (view.getLayoutParams() == null) view.setLayoutParams(new ViewGroup.LayoutParams(width, height));
+        //else view.setLayoutParams(new ViewGroup.LayoutParams(width, height));
         if (background != null) view.setBackground(background);
         if (onClick != null) view.setOnClickListener(v -> onClick.accept(view));
         if (onLongClick != null) view.setOnLongClickListener(v -> onLongClick.apply(view));
