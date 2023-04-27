@@ -31,8 +31,7 @@ import java.util.function.Consumer;
 import static android.view.Gravity.*;
 
 public final class Android {
-    //TODO:
-    //- Check permission processing
+    // TODO: 4/27/2023 Check permission processing
 
     private Android() {
     }
