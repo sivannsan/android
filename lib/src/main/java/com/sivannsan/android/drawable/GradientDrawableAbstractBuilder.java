@@ -3,7 +3,7 @@ package com.sivannsan.android.drawable;
 import android.graphics.Color;
 
 import com.sivannsan.foundation.annotation.Nonnull;
-import com.sivannsan.foundation.Validate;
+import com.sivannsan.foundation.common.Validate;
 
 public abstract class GradientDrawableAbstractBuilder<Builder, GradientDrawable extends android.graphics.drawable.GradientDrawable> extends DrawableAbstractBuilder<Builder, GradientDrawable> {
     private Integer shape, cornerRadius, strokeWidth;

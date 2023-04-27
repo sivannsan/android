@@ -32,6 +32,6 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-    implementation 'com.github.sivannsan:foundation:d65ab0d'
-    implementation 'com.github.sivannsan:millidata:c289d11'
+    implementation 'com.github.sivannsan:foundation:1.0.0-beta.2'
+    implementation 'com.github.sivannsan:millidata:1.0.0'
 }

@@ -7,13 +7,12 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.view.MotionEvent;
-import android.view.View;
 import android.view.ViewGroup;
 
 import com.sivannsan.android.builder.AbstractBuilder;
 import com.sivannsan.android.scene.Scene;
 import com.sivannsan.foundation.annotation.Nonnull;
-import com.sivannsan.foundation.Validate;
+import com.sivannsan.foundation.common.Validate;
 
 import java.util.function.Consumer;
 import java.util.function.Function;

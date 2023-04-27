@@ -4,7 +4,7 @@ import android.widget.LinearLayout;
 
 import com.sivannsan.android.scene.Scene;
 import com.sivannsan.foundation.annotation.Nonnull;
-import com.sivannsan.foundation.Validate;
+import com.sivannsan.foundation.common.Validate;
 
 public final class LinearLayoutBuilder extends LinearLayoutAbstractBuilder<LinearLayoutBuilder, LinearLayout> {
     public LinearLayoutBuilder(@Nonnull Scene scene) {

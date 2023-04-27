@@ -1,6 +1,6 @@
 package com.sivannsan.android.picker;
 
-import com.sivannsan.foundation.Validate;
+import com.sivannsan.foundation.common.Validate;
 import com.sivannsan.foundation.annotation.Nonnull;
 
 import java.util.ArrayList;

@@ -18,8 +18,8 @@ import com.sivannsan.android.integratedview.TitledBoxBuilder;
 import com.sivannsan.android.integratedview.ToolbarBuilder;
 import com.sivannsan.android.scene.Scene;
 import com.sivannsan.android.widget.*;
-import com.sivannsan.foundation.Validate;
 import com.sivannsan.foundation.annotation.Nonnull;
+import com.sivannsan.foundation.common.Validate;
 
 import java.io.File;
 import java.io.IOException;

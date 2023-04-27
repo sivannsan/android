@@ -4,7 +4,7 @@ import android.widget.FrameLayout;
 
 import com.sivannsan.android.scene.Scene;
 import com.sivannsan.foundation.annotation.Nonnull;
-import com.sivannsan.foundation.Validate;
+import com.sivannsan.foundation.common.Validate;
 
 public final class FrameLayoutBuilder extends FrameLayoutAbstractBuilder<FrameLayoutBuilder, FrameLayout> {
     public FrameLayoutBuilder(@Nonnull Scene scene) {

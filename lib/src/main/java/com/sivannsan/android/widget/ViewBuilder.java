@@ -4,7 +4,7 @@ import android.view.View;
 
 import com.sivannsan.android.scene.Scene;
 import com.sivannsan.foundation.annotation.Nonnull;
-import com.sivannsan.foundation.Validate;
+import com.sivannsan.foundation.common.Validate;
 
 public final class ViewBuilder extends ViewAbstractBuilder<ViewBuilder, View> {
     public ViewBuilder(@Nonnull Scene scene) {

@@ -3,7 +3,7 @@ package com.sivannsan.android.drawable;
 import android.graphics.drawable.GradientDrawable;
 
 import com.sivannsan.foundation.annotation.Nonnull;
-import com.sivannsan.foundation.Validate;
+import com.sivannsan.foundation.common.Validate;
 
 public final class GradientDrawableBuilder extends GradientDrawableAbstractBuilder<GradientDrawableBuilder, GradientDrawable> {
     public GradientDrawableBuilder() {

@@ -7,7 +7,7 @@ import android.view.View;
 
 import com.sivannsan.android.scene.Scene;
 import com.sivannsan.foundation.annotation.Nonnull;
-import com.sivannsan.foundation.Validate;
+import com.sivannsan.foundation.common.Validate;
 
 public abstract class TextViewAbstractBuilder<Builder, TextView extends android.widget.TextView> extends ViewAbstractBuilder<Builder, TextView> {
     private Integer gravity, textSize, textAlignment, textFontStyle, paddingLeft, paddingTop, paddingRight, paddingBottom;

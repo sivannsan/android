@@ -4,7 +4,7 @@ import android.widget.ListView;
 
 import com.sivannsan.android.scene.Scene;
 import com.sivannsan.foundation.annotation.Nonnull;
-import com.sivannsan.foundation.Validate;
+import com.sivannsan.foundation.common.Validate;
 
 public final class ListViewBuilder extends ListViewAbstractBuilder<ListViewBuilder, ListView> {
     public ListViewBuilder(@Nonnull Scene scene) {

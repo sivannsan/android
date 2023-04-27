@@ -4,7 +4,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.sivannsan.android.scene.Scene;
 import com.sivannsan.foundation.annotation.Nonnull;
-import com.sivannsan.foundation.Validate;
+import com.sivannsan.foundation.common.Validate;
 
 public final class ViewPagerBuilder extends ViewPagerAbstractBuilder<ViewPagerBuilder, ViewPager> {
     public ViewPagerBuilder(@Nonnull Scene scene) {

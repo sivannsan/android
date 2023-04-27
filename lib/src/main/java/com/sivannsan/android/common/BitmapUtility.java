@@ -12,12 +12,11 @@ import android.widget.ImageView;
 
 import com.sivannsan.android.scene.Scene;
 import com.sivannsan.foundation.annotation.Nonnull;
-import com.sivannsan.foundation.Validate;
+import com.sivannsan.foundation.common.Validate;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Date;
 
 public final class BitmapUtility {
     public static Bitmap toBitmap(byte[] bytes) {

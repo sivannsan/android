@@ -4,7 +4,7 @@ import android.widget.Button;
 
 import com.sivannsan.android.scene.Scene;
 import com.sivannsan.foundation.annotation.Nonnull;
-import com.sivannsan.foundation.Validate;
+import com.sivannsan.foundation.common.Validate;
 
 public final class ButtonBuilder extends ButtonAbstractBuilder<ButtonBuilder, Button> {
     public ButtonBuilder(@Nonnull Scene scene) {
